@@ -159,7 +159,13 @@
     li::marker { color: var(--teal); }
     li b { font-weight: 600; color: var(--blue); }
 
-    .skills { display: grid; gap: 16px; }
+    .header-skills { margin-top: 30px; text-align: left; }
+    .skills { display: grid; gap: 14px; }
+    .skills > div { display: grid; grid-template-columns: 250px 1fr; align-items: center; gap: 8px 16px; }
+    .skills .skill-label { margin-bottom: 0; }
+    @media (max-width: 620px) {
+      .skills > div { grid-template-columns: 1fr; }
+    }
     .skill-label { font-weight: 600; font-size: 0.95rem; margin-bottom: 8px; }
     .tags { display: flex; flex-wrap: wrap; gap: 6px; }
     .tag {
@@ -226,6 +232,33 @@
           GitHub
         </a>
       </div>
+
+      <section class="header-skills" aria-label="Skills">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div>
+            <div class="skill-label">Programming &amp; Machine Learning</div>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">T-SQL</span><span class="tag">SQL</span>
+              <span class="tag">VBA</span><span class="tag">Pandas</span><span class="tag">Scikit-Learn</span>
+            </div>
+          </div>
+          <div>
+            <div class="skill-label">Data, BI &amp; Cloud</div>
+            <div class="tags">
+              <span class="tag">Databricks</span><span class="tag">DuckDB</span><span class="tag">AWS</span>
+              <span class="tag">Power BI</span><span class="tag">Excel</span>
+            </div>
+          </div>
+          <div>
+            <div class="skill-label">Languages</div>
+            <div class="tags">
+              <span class="tag">Portuguese (Native)</span><span class="tag">English (C1)</span>
+              <span class="tag">French (A2)</span><span class="tag">Spanish (A2)</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
 
     <div class="switch" role="tablist">
@@ -376,33 +409,6 @@
               <div class="item-org">Projeto PATA</div>
             </div>
             <div class="item-date">Oct 2022 – Jan 2024</div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>Skills</h2>
-        <div class="skills">
-          <div>
-            <div class="skill-label">Programming &amp; Machine Learning</div>
-            <div class="tags">
-              <span class="tag">Python</span><span class="tag">T-SQL</span><span class="tag">SQL</span>
-              <span class="tag">VBA</span><span class="tag">Pandas</span><span class="tag">Scikit-Learn</span>
-            </div>
-          </div>
-          <div>
-            <div class="skill-label">Data, BI &amp; Cloud</div>
-            <div class="tags">
-              <span class="tag">Databricks</span><span class="tag">DuckDB</span><span class="tag">AWS</span>
-              <span class="tag">Power BI</span><span class="tag">Excel</span>
-            </div>
-          </div>
-          <div>
-            <div class="skill-label">Languages</div>
-            <div class="tags">
-              <span class="tag">Portuguese (Native)</span><span class="tag">English (C1)</span>
-              <span class="tag">French (A2)</span><span class="tag">Spanish (A2)</span>
-            </div>
           </div>
         </div>
       </section>
